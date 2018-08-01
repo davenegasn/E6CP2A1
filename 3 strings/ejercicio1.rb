@@ -5,3 +5,9 @@
 
 cadena = 'Hola Mundo!'
 caracter = 'o'
+
+def find(string, item)
+	puts "El caracter #{item} se encuentra en el strgin #{string}" if string.include?(item) 
+end 
+
+print find(cadena, caracter)

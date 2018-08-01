@@ -6,3 +6,28 @@
 
 a = [1, 2, 3, 9, 12, 31, 'domingo']
 b = %w[lunes martes miércoles jueves viernes sábado domingo]
+
+# 1
+a.each_with_index do |value, index|
+	puts "#{value} #{b[index]}"
+end 
+
+# 2
+c = []
+
+a.each_with_index do |value, index|
+	c << "#{value}, #{b[index]}" if value != b[index]
+end 
+
+# 3
+d = []
+
+a.each_with_index do |value, index|
+	d << "#{value}, #{b[index]}" if value == b[index]
+end 
+
+# 4
+e = []
+a.each_with_index do |value, index|
+	e << "#{value}, #{b[index]}" if value != b[index]
+end 

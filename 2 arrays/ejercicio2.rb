@@ -10,3 +10,19 @@
 #    invertir el orden de los elementos en un arreglo.
 
 a = [1,2,3,9,1,4,5,2,3,6,6]
+
+# 1
+a.shift
+# 2
+a.pop
+# 3
+a.delete(4)
+# 4
+a.each do |e|
+	a.delete(e) if e != 1 
+end 
+# 5
+b = []
+a.each do
+	b.push(a.pop)
+end 
